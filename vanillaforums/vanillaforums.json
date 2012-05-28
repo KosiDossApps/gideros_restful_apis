@@ -1,0 +1,46 @@
+{
+    "name" : "Vanilla Forums API",
+    
+    "methods" :{
+
+        "getCategories" : {
+            "path" : "categories/all.json", 
+            "method" : "GET"
+        },
+
+        "getCategory" : {
+            "path" : "categories/:category.json", 
+            "required_params" : [ "category" ],
+            "method" : "GET"
+        },
+
+        "getActivity" : {
+            "path" : "activity.json", 
+            "method" : "GET"
+        },
+
+        "getDiscussions" : {
+            "path" : "discussions.json", 
+            "method" : "GET"
+        },
+
+        "getDiscussion" : {
+            "path" : "discussion.json", 
+            "required_params" : [ "DiscussionID" ],
+            "method" : "GET"
+        },
+
+        "search" : {
+            "path" : "search.json", 
+            "required_params" : [ "Search" ],
+            "method" : "GET"
+        },
+
+        "getProfile" : {
+            "path" : "profile.json", 
+            "required_params" : [ "UserID" ],
+            "method" : "GET"
+        }
+        
+    }
+}

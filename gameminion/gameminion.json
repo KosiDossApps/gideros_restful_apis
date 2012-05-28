@@ -1,0 +1,203 @@
+{
+    "base_url" : "https://api.gameminion.com",
+    "name" : "GameMinion API",
+    "version" : 0,
+    "documentation" : "https://gameminion.atlassian.net/wiki/display/API/Home",
+
+    "methods" : {
+        
+        "getAchievements" : {
+            "path" : "achievements.json",
+            "method" : "GET",
+            "authentication" : true
+        },
+
+        "getAchievement" : {
+            "path" : "achievements/:achievement.json",
+            "required_params" : [ "achievement" ],
+            "method" : "GET",
+            "authentication" : true
+        },
+        
+        "getMyAchievements" : {
+            "path" : "achievements/user/:userid.json",
+            "method" : "GET",
+            "authentication" : true
+        },
+        
+        "getUserAchievements" : {
+            "path" : "achievements/user/:userid.json",
+            "required_params" : [ "userid" ],
+            "method" : "GET",
+            "authentication" : true
+        },
+
+        "unlockAchievement" : {
+            "path" : "achievements/unlock/:achievement.json",
+            "required_params" : [ "achievement" ],
+            "method" : "POST",
+            "authentication" : true
+        },
+
+        "submitEvent" : {
+            "path" : "analytic_events.json",
+            "required_params" : [ "event_type", "name", "message" ],
+            "method" : "POST",
+            "authentication" : true
+        },
+
+        "login" : {
+            "path" : "user_sessions/user_login.json",
+            "required_params" : [ "login", "password" ],
+            "method" : "POST"
+        },
+
+        "joinChatRoom" : {
+            "path" : "chats/:roomid/add_user.json",
+            "required_params" : [ "roomid", "userid" ],
+            "method" : "POST",
+            "authentication" : true
+        },
+
+        "leaveChatRoom" : {
+            "path" : "chats/:roomid/remove_user.json",
+            "required_params" : [ "roomid", "userid" ],
+            "method" : "DELETE",
+            "authentication" : true
+        },
+
+        "getUsersInChatRoom" : {
+            "path" : "chats/:roomid.json",
+            "required_params" : [ "roomid" ],
+            "method" : "GET",
+            "authentication" : true
+        },
+      
+        "createChatRoom" : {
+            "path" : "chats.json",
+            "required_params" : [ "name" ],
+            "method" : "POST",
+            "authentication" : true
+        },
+        
+        "removeChatRoom" : {
+            "path" : "chats.json",
+            "required_params" : [ "roomid" ],
+            "method" : "DELETE",
+            "authentication" : true
+        },
+        
+        "getChatHistory" : {
+            "path" : "chats/:roomid/get_recent_chats.json",
+            "required_params" : [ "roomid" ],
+            "method" : "GET",
+            "authentication" : true
+        },
+        
+        "getChatRooms" : {
+            "path" : "chats.json",
+            "method" : "GET",
+            "authentication" : true
+        },
+        
+        "sendChatMessage" : {
+            "path" : "chats/:roomid/send_message.json",
+            "required_params" : [ "roomid", "content" ],
+            "method" : "POST",
+            "authentication" : true
+        },
+
+
+        "getLeaderboards" : {
+            "path" : "leaderboards.json",
+            "method" : "GET",
+            "authentication" : true
+        },
+
+        "getLeaderboard" : {
+            "path" : "leaderboards/:leaderboard.json",
+            "required_params" : [ "leaderboard" ],
+            "method" : "GET",
+            "authentication" : true
+        },
+
+        "submitHighScore" : {
+            "path" : "leaderboards/:leaderboard/scores.json",
+            "required_params" : [ "leaderboard", "value" ],
+            "method" : "POST",
+            "authentication" : true
+        },
+
+        "getHighScores" : {
+            "path" : "leaderboards/:leaderboard/scores.json",
+            "required_params" : [ "leaderboard" ],
+            "method" : "GET",
+            "authentication" : true
+        },
+
+
+        "getNews" : {
+            "path" : "news.json",
+            "method" : "GET",
+            "authentication" : true
+        },
+
+        "getUnreadNews" : {
+            "path" : "news/unread.json",
+            "method" : "GET",
+            "authentication" : true
+        },
+
+        "getNewsArticle" : {
+            "path" : "news/:article.json",
+            "required_params" : [ "article" ],
+            "method" : "GET",
+            "authentication" : true
+        },
+
+        "registerUser" : { 
+            "path" : "users.json",
+            "required_params" : [ "first_name", "last_name", "username", "email", "password" ],
+            "optional_params" : [
+                "profile_picture", "points" ,
+                "facebook_id", "facebook_enabled", "facebook_access_token",
+                "twitter_enabled ", "twitter_enabled_token"
+            ],
+            "method" : "POST"
+        },
+
+        "getMyProfile" : {
+            "path" : "users/my_profile.json",
+            "method" : "GET",
+            "authentication" : true
+        },
+        
+        "getUserProfile" : {
+            "path" : "users/:userid.json",
+            "required_params" : [ "userid" ],
+            "method" : "GET",
+            "authentication" : true
+        },
+
+        "getFriends" : {
+            "path" : "friends.json",
+            "method" : "GET",
+            "authentication" : true
+        },
+
+        "addFriend" : {
+            "path" : "friends.json",
+            "required_params" : [ "friend_id" ],
+            "method" : "POST",
+            "authentication" : true
+        },
+
+        "removeFriend" : {
+            "path" : "friends.json",
+            "required_params" : [ "friend_id" ],
+            "method" : "DELETE",
+            "authentication" : true
+        }
+    }
+}
+

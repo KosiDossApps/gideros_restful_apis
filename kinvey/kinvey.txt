@@ -1,0 +1,30 @@
+-----------------------------------------------------------------------------------------
+-- Kinvey API
+-----------------------------------------------------------------------------------------
+return {
+   base_url = "https://baas.kinvey.com",
+   name = "Kinvey API",
+   version = 0,
+   methods = {
+
+      -- Ping
+      ping = {
+         path = "appdata/:appkey/",
+         method = "GET",
+      },
+
+      -- Users
+      createUser = {
+         path = "user/:appkey/",
+         method = "POST",
+         optional_params = { "body" },
+      },
+
+      getUser = {
+         path = "user/:appkey/:id",
+         required_params = { "id" },
+         method = "GET",
+      },
+   },
+};
+
