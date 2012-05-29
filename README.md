@@ -4,12 +4,10 @@ gideros_rest_apis
 Gideros Libraries to interact with various RESTful APIs 
 
 Initial support is available for:
-* GameMinion
+* GameMinion (missing chat, cloud storage, multiplayer, push notification, social connect)
 * Redmine
 * Vanilla Forums
-
-Barely just started:
-* Kinvey
+* Kinvey (missing resource, geo location, query grouping)
  
 Would like to add:
 * Parse
