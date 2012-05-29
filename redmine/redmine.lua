@@ -23,6 +23,6 @@ end
 function Redmine:callMethod(name, t, ...)
 
    -- Make the rest call
-   self.rest:call(name, t, self.headers, extraArgList, callback, preCallback, ...)
+   self.rest:call(name, t, self.headers, nil, nil, ...)
    
 end

@@ -38,6 +38,6 @@ function GameMinion:callMethod(name, t, ...)
    end
 
    -- Make the rest call
-   self.rest:call(name, t, self.headers, extraArgList, callback, preCallback, ...)
+   self.rest:call(name, t, self.headers, extraArgList, preCallback, ...)
    
 end

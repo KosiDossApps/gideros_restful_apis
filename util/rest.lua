@@ -20,6 +20,7 @@ function Rest.defaultRestHandler(r)
    if r.error then 
       print("--------------- "..r.name)
       print("ERROR") 
+      print("URL: "..r.url)
    else 
       print("--------------- "..r.name)
       print(inspect(r.data)) 
@@ -70,7 +71,7 @@ function Rest:init(obj, filename)
 
 end
 
-function Rest:call(name, t, headers, extraArgList, callback, preCallbackHook, ...)
+function Rest:call(name, t, headers, extraArgList, preCallbackHook, ...)
    local arg      = {n=select('#', ...), ...}
    local index    = 1
    local argList  = {}
