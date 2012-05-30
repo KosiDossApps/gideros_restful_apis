@@ -30,7 +30,7 @@ firebase:write("anotherExample", { 1,2,3,4,5,6,6,8, anotherTable={444,444,44,44,
 end)
 
 
--- Append to elements w/in a collection
+-- Append elements to a collection
 firebase:append("gideros/chatroom", { name="ND", msg="amessage" }, function(r)
    if r.error then
       print("ERROR")
