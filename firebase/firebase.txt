@@ -1,0 +1,37 @@
+-----------------------------------------------------------------------------------------
+-- Firebase API
+-----------------------------------------------------------------------------------------
+return {
+   name = "Firebase API",
+   version = 0,
+   methods = {
+
+      write = {
+         path = ":path.json",
+         required_params = { "path" },
+         required_payload = true,
+         method = "PUT",
+      },
+
+      append = {
+         path = ":path.json",
+         required_params = { "path" },
+         required_payload = true,
+         method = "POST",
+      },
+
+      get = {
+         path = ":path.json",
+         required_params = { "path" },
+         method = "GET",
+      },
+
+      remove = {
+         path = ":path.json",
+         required_params = { "path" },
+         method = "DELETE",
+      },
+
+   },
+};
+
