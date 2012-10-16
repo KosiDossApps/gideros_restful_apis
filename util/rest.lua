@@ -3,6 +3,18 @@
 -----------------------------------------------------------------------------------------
 local json = require("Json")
 
+-----------------------------------------------------------------------------------------
+-- Helper function to encode url arguments
+-----------------------------------------------------------------------------------------
+local function url_encode(str)
+  if (str) then
+    str = string.gsub (str, "\n", "\r\n")
+    str = string.gsub (str, "([^%w ])",
+        function (c) return string.format ("%%%02X", string.byte(c)) end)
+    str = string.gsub (str, " ", "+")
+  end
+  return str	
+end
 
 -----------------------------------------------------------------------------------------
 -- Rest
@@ -128,9 +140,9 @@ function Rest:call(name, t, headers, extraArgList, preCallbackHook, ...)
       newpath, count = newpath:gsub(":"..a, v)
       if count == 0 then
          if args == "" then
-            args = "?"..a.."="..v
+            args = "?"..a.."="..url_encode(v)
          else
-            args = args .."&".. a .."="..v
+            args = args .."&".. a .."="..url_encode(v)
          end
       end
    end

@@ -1,0 +1,14 @@
+<project>
+ <properties autorotation="0" fps="60" scaleMode="0" iosDevice="0" xcodeVersion="0" packageName="com.yourdomain.yourapp" logicalHeight="480" logicalWidth="320" retinaDisplay="0" assetsOnly="0" orientation="0" architecture="0">
+  <imageScales/>
+ </properties>
+ <folder name="util">
+  <file source="../../util/rest.lua"/>
+  <file source="../../util/Json.lua"/>
+  <file source="../../util/inspect.lua"/>
+  <file source="../../util/b64enc.lua"/>
+ </folder>
+ <file source="main.lua"/>
+ <file source="../../google_calendar/google_calendar.txt"/>
+ <file source="../../google_calendar/google_calendar.lua"/>
+</project>

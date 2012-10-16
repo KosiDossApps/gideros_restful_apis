@@ -1,0 +1,21 @@
+-----------------------------------------------------------------------------------------
+-- Google Calendar API
+-----------------------------------------------------------------------------------------
+return {
+   base_url = "https://www.googleapis.com/calendar/v3",
+   name = "Google Calendar API",
+   version = 0,
+   methods = {
+
+      -- Events
+      eventList = {
+         path = "calendars/:calendarId/events",
+         method = "GET",
+         required_params = { "calendarId" },
+         optional_params = {  "alwaysIncludeEmail", "iCalUID", "maxAttendees", "maxResults", "orderBy",
+                              "pageToken", "q", "showDeleted", "showHiddenInvitations", "singleEvents",
+                              "timeMax", "timeMin", "timeZone", "updatedMin", "fields" },
+      },
+   },
+};
+
